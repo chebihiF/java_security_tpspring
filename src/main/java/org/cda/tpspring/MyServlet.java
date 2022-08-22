@@ -10,6 +10,7 @@ public class MyServlet extends HttpServlet {
 
     @Override //IOC ==> tomcat (req, resp)
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+        resp.setContentType("text/html");
+        resp.getWriter().println("Hello from <b>Servlet</b>");
     }
 }
